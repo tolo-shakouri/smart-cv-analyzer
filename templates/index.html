@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Skill Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Skill Analyzer</h1>
+
+    <p>Upload your resume in PDF format to detect your skills.</p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="resume" accept=".pdf" required>
+
+        <br><br>
+
+        <button type="submit">Analyze Resume</button>
+    </form>
+
+    {% if skills %}
+
+        <h2>Detected Skills</h2>
+
+        <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+
+        <h3>Total Skills: {{ skills|length }}</h3>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
