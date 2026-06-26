@@ -50,6 +50,12 @@ python app.py
 
 ---
 
+## Screenshot
+
+![AI Resume Skill Analyzer](images/screenshot.png)
+
+---
+
 ## Author
 
 **Tolo Shakouri**
